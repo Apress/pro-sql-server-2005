@@ -1,0 +1,5 @@
+bin\Debug\ProSQLServer2005_Chapter6.dll
+bin\Debug\ProSQLServer2005_Chapter6.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\ProSQLServer2005_Chapter6.dll
+obj\Debug\ProSQLServer2005_Chapter6.pdb

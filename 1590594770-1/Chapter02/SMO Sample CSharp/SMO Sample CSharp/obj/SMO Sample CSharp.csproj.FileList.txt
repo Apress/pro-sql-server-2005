@@ -1,0 +1,9 @@
+obj\Debug\SMO Sample CSharp.exe
+obj\Debug\SMO Sample CSharp.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\SMO_Sample_CSharp.Properties.Resources.resources
+obj\Debug\SMO Sample CSharp.csproj.GenerateResource.Cache
+.\bin\Debug\SMO Sample CSharp.exe
+.\bin\Debug\SMO Sample CSharp.pdb
+.\bin\Debug\Microsoft.SqlServer.Replication.dll
+.\bin\Debug\Microsoft.SqlServer.BatchParser.dll

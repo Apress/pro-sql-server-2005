@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>DataSource1</Name>
+  <DataSourceID>16d670cf-9482-432f-9782-78c1c8d92a64</DataSourceID>
+  <ConnectionProperties>
+    <Extension>SSIS</Extension>
+    <ConnectString>-f "C:\Documents and Settings\Administrator\My Documents\Visual Studio 2005\Projects\Integration Services Project1\Integration Services Project1\package.dtsx"</ConnectString>
+  </ConnectionProperties>
+</RptDataSource>

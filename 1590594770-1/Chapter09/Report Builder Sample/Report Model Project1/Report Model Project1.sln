@@ -1,0 +1,18 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{999D2CB9-9277-4465-A902-1604ED3686A3}") = "Northwind Report Model Project", "Northwind Report Model Project.smdlproj", "{8C1AE98C-50C7-4985-831F-EA2035C923E3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Production|Default = Production|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8C1AE98C-50C7-4985-831F-EA2035C923E3}.Production|Default.ActiveCfg = Production
+		{8C1AE98C-50C7-4985-831F-EA2035C923E3}.Production|Default.Build.0 = Production
+		{8C1AE98C-50C7-4985-831F-EA2035C923E3}.Production|Default.Deploy.0 = Production
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

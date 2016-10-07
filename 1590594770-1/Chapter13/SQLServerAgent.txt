@@ -1,0 +1,6 @@
+SP_CONFIGURE 'show advanced', 1
+GO
+RECONFIGURE
+GO
+SP_CONFIGURE
+

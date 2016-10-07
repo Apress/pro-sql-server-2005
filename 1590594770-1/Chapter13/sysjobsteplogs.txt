@@ -1,0 +1,4 @@
+USE MSDB
+GO
+sp_help_jobsteplog @job_name='FullDBBackup'
+GO

@@ -1,0 +1,27 @@
+(
+   ([Measures].[Sales Amount] –[Measures].[Total Product Cost])
+    / [Measures].[Sales Amount]
+)
+
+CASE
+  WHEN /* 60% looking good so 1 */
+    ((([Measures].[Sales Amount] -  [Measures].[Total Product Cost])
+          / [Measures].[Sales Amount])> 0.60) THEN 1
+  WHEN /* between 30 and 60 percent profit, okay but not great  so zero */
+    ((([Measures].[Sales Amount] - [Measures].[Total Product Cost])
+         / [Measures].[Sales Amount])> 0.30) THEN 0
+  WHEN /* between 10 and 30 percent profit, okay but not great  so -0.5 */
+   ((([Measures].[Sales Amount] - [Measures].[Total Product Cost]) 
+         / [Measures].[Sales Amount])> 0.10) THEN -0.5
+  ELSE -1 /* less 10% or less profit or maybe even a loss so -1 */
+END
+
+
+CASE
+  WHEN
+    ((([Measures].[Sales Amount] - [Measures].[Total Product Cost]) >
+((([Order Date].[Fiscal Time].PrevMember, [Measures].[Sales Amount]) -
+       ([Order Date].[Fiscal Time].PrevMember, [Measures].[Total Product Cost]))
+  THEN 1
+  ELSE -1
+END

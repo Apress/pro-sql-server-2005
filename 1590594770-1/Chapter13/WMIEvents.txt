@@ -1,0 +1,21 @@
+EXEC msdb.dbo.sp_add_operator @name=N'MyAgentOperator', 
+                               @enabled=1, 
+                               @pager_days=0, 
+                               @netsend_address=N'robs_laptop'
+GO
+
+
+EXEC msdb.dbo.sp_add_alert @name=N'Create_Database_Alert', 
+                        @enabled=1, 
+                        @delay_between_responses=0, 
+                        @include_event_description_in=0, 
+@wmi_namespace=N'\\.\root\Microsoft\SqlServer\ServerEvents\MSSQLSERVER', 
+                         @wmi_query=N'SELECT * FROM CREATE_DATABASE'
+GO
+
+
+EXEC msdb.dbo.sp_add_notification
+     @alert_name=N'Create_Database_Alert',
+     @operator_name=N'MyAgentOperator',
+     @notification_method = 4
+GO

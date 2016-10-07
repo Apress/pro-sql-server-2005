@@ -1,0 +1,3 @@
+<xs:element name="DimCustomerMaster"
+  msprop:QueryDefinition="SELECT CustomerKey, GeographyKey,
+      CustomerAlternateKey, Title, FirstName,

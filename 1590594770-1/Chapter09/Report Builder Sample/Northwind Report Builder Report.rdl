@@ -1,0 +1,914 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <PageHeight>11in</PageHeight>
+  <rd:DrawGrid>false</rd:DrawGrid>
+  <rd:SnapToGrid>false</rd:SnapToGrid>
+  <rd:GridSpacing>0.25in</rd:GridSpacing>
+  <Body>
+    <Style />
+    <Height>0in</Height>
+    <ReportItems>
+      <Textbox Name="Title">
+        <Left>0.5in</Left>
+        <Top>0.5in</Top>
+        <CanGrow>true</CanGrow>
+        <Width>7.5in</Width>
+        <Height>0.5in</Height>
+        <Style>
+          <FontWeight>Bold</FontWeight>
+          <PaddingLeft>6pt</PaddingLeft>
+          <PaddingTop>6pt</PaddingTop>
+          <FontSize>18pt</FontSize>
+          <TextAlign>Left</TextAlign>
+          <PaddingBottom>6pt</PaddingBottom>
+          <PaddingRight>6pt</PaddingRight>
+        </Style>
+        <Value>Order Information</Value>
+      </Textbox>
+      <Table Name="table">
+        <Width>0in</Width>
+        <TableColumns>
+          <TableColumn>
+            <Width>1.0625in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1in</Width>
+          </TableColumn>
+        </TableColumns>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <Height>0.25in</Height>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="CompanyName_Value">
+                      <CanGrow>true</CanGrow>
+                      <Action>
+                        <Drillthrough>
+                          <Parameters>
+                            <Parameter Name="rs:EntityID">
+                              <Value>Geb928a56-9997-4925-af1b-4b177cdd3170</Value>
+                            </Parameter>
+                            <Parameter Name="rs:DrillType">
+                              <Value>Detail</Value>
+                            </Parameter>
+                            <Parameter Name="rs:Command">
+                              <Value>Drillthrough</Value>
+                            </Parameter>
+                            <Parameter Name="DrillthroughContext">
+                              <Value>=Code.DrillthroughContextBuilder.CreateAsString(DataSets!dataSet.RewrittenCommandText, new String() { "CompanyName" }, "&lt;SelectedPath xmlns=""http" &amp; Chr(58) &amp; "//schemas.microsoft.com/sqlserver/2004/10/semanticmodeling"" /&gt;", new String() { "Customer", "Order" }, new Object() { Fields!Customer.Value, Fields!Order.Value }, new Boolean() { InScope("table_Customer"), InScope("table_Order") })</Value>
+                            </Parameter>
+                          </Parameters>
+                          <ReportName>/Models/Northwind</ReportName>
+                        </Drillthrough>
+                      </Action>
+                      <Style>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontWeight>Normal</FontWeight>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingTop>4pt</PaddingTop>
+                        <FontSize>8pt</FontSize>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                      <HideDuplicates>table_Customer</HideDuplicates>
+                      <Value>=Fields!CompanyName.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="ContactName_Value">
+                      <CanGrow>true</CanGrow>
+                      <Style>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontWeight>Normal</FontWeight>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingTop>4pt</PaddingTop>
+                        <FontSize>8pt</FontSize>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                      <HideDuplicates>table_Customer</HideDuplicates>
+                      <Value>=Fields!ContactName.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="City_Value">
+                      <CanGrow>true</CanGrow>
+                      <Style>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontWeight>Normal</FontWeight>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingTop>4pt</PaddingTop>
+                        <FontSize>8pt</FontSize>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                      <HideDuplicates>table_Customer</HideDuplicates>
+                      <Value>=Fields!City.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="OrderDate_Value">
+                      <CanGrow>true</CanGrow>
+                      <Action>
+                        <Drillthrough>
+                          <Parameters>
+                            <Parameter Name="rs:EntityID">
+                              <Value>Ga240dd4b-a0b3-4e8a-8b42-eb4ab8d7a328</Value>
+                            </Parameter>
+                            <Parameter Name="rs:DrillType">
+                              <Value>Detail</Value>
+                            </Parameter>
+                            <Parameter Name="rs:Command">
+                              <Value>Drillthrough</Value>
+                            </Parameter>
+                            <Parameter Name="DrillthroughContext">
+                              <Value>=Code.DrillthroughContextBuilder.CreateAsString(DataSets!dataSet.RewrittenCommandText, new String() { "OrderDate" }, "&lt;SelectedPath xmlns=""http" &amp; Chr(58) &amp; "//schemas.microsoft.com/sqlserver/2004/10/semanticmodeling"" /&gt;", new String() { "Customer", "Order" }, new Object() { Fields!Customer.Value, Fields!Order.Value }, new Boolean() { InScope("table_Customer"), InScope("table_Order") })</Value>
+                            </Parameter>
+                          </Parameters>
+                          <ReportName>/Models/Northwind</ReportName>
+                        </Drillthrough>
+                      </Action>
+                      <Style>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontWeight>Normal</FontWeight>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingTop>4pt</PaddingTop>
+                        <FontSize>8pt</FontSize>
+                        <Format>d</Format>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                      <Value>=Fields!OrderDate.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="ShippedDate_Value">
+                      <CanGrow>true</CanGrow>
+                      <Action>
+                        <Drillthrough>
+                          <Parameters>
+                            <Parameter Name="rs:EntityID">
+                              <Value>Ga240dd4b-a0b3-4e8a-8b42-eb4ab8d7a328</Value>
+                            </Parameter>
+                            <Parameter Name="rs:DrillType">
+                              <Value>Detail</Value>
+                            </Parameter>
+                            <Parameter Name="rs:Command">
+                              <Value>Drillthrough</Value>
+                            </Parameter>
+                            <Parameter Name="DrillthroughContext">
+                              <Value>=Code.DrillthroughContextBuilder.CreateAsString(DataSets!dataSet.RewrittenCommandText, new String() { "ShippedDate" }, "&lt;SelectedPath xmlns=""http" &amp; Chr(58) &amp; "//schemas.microsoft.com/sqlserver/2004/10/semanticmodeling"" /&gt;", new String() { "Customer", "Order" }, new Object() { Fields!Customer.Value, Fields!Order.Value }, new Boolean() { InScope("table_Customer"), InScope("table_Order") })</Value>
+                            </Parameter>
+                          </Parameters>
+                          <ReportName>/Models/Northwind</ReportName>
+                        </Drillthrough>
+                      </Action>
+                      <Style>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontWeight>Normal</FontWeight>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingTop>4pt</PaddingTop>
+                        <FontSize>8pt</FontSize>
+                        <Format>d</Format>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                      <Value>=Fields!ShippedDate.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="AvgUnitPrice_Value">
+                      <CanGrow>true</CanGrow>
+                      <Action>
+                        <Drillthrough>
+                          <Parameters>
+                            <Parameter Name="rs:EntityID">
+                              <Value>G4c235f0e-15f0-4ef6-a8c4-71536ba2204a</Value>
+                            </Parameter>
+                            <Parameter Name="rs:DrillType">
+                              <Value>List</Value>
+                            </Parameter>
+                            <Parameter Name="rs:Command">
+                              <Value>Drillthrough</Value>
+                            </Parameter>
+                            <Parameter Name="DrillthroughContext">
+                              <Value>=Code.DrillthroughContextBuilder.CreateAsString(DataSets!dataSet.RewrittenCommandText, new String() { "AvgUnitPrice_Sum", "AvgUnitPrice_Count" }, "&lt;SelectedPath xmlns=""http" &amp; Chr(58) &amp; "//schemas.microsoft.com/sqlserver/2004/10/semanticmodeling""&gt;&lt;RolePathItem&gt;&lt;RoleID&gt;G530fd4df-6fda-461a-b4fa-c8b842421e06&lt;/RoleID&gt;&lt;/RolePathItem&gt;&lt;/SelectedPath&gt;", new String() { "Customer", "Order" }, new Object() { Fields!Customer.Value, Fields!Order.Value }, new Boolean() { InScope("table_Customer"), InScope("table_Order") })</Value>
+                            </Parameter>
+                          </Parameters>
+                          <ReportName>/Models/Northwind</ReportName>
+                        </Drillthrough>
+                      </Action>
+                      <Style>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontWeight>Normal</FontWeight>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingTop>4pt</PaddingTop>
+                        <FontSize>8pt</FontSize>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                      <Value>=IIF(Fields!AvgUnitPrice_Count.Value=0,Nothing,Fields!AvgUnitPrice_Sum.Value/Fields!AvgUnitPrice_Count.Value)</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+            </TableRow>
+          </TableRows>
+          <Grouping Name="table_Order">
+            <GroupExpressions>
+              <GroupExpression>=Fields!Order.Value</GroupExpression>
+            </GroupExpressions>
+          </Grouping>
+          <Sorting>
+            <SortBy>
+              <SortExpression>=IIf(True, Fields!OrderDate.Value, Nothing)</SortExpression>
+              <Direction>Descending</Direction>
+            </SortBy>
+            <SortBy>
+              <SortExpression>=IIf(True, Fields!expr1.Value, Nothing)</SortExpression>
+              <Direction>Descending</Direction>
+            </SortBy>
+            <SortBy>
+              <SortExpression>=IIf(True, Fields!ShippedDate.Value, Nothing)</SortExpression>
+              <Direction>Descending</Direction>
+            </SortBy>
+            <SortBy>
+              <SortExpression>=IIf(True, Fields!expr2.Value, Nothing)</SortExpression>
+            </SortBy>
+            <SortBy>
+              <SortExpression>=IIf(True, Fields!expr3.Value, Nothing)</SortExpression>
+              <Direction>Descending</Direction>
+            </SortBy>
+          </Sorting>
+        </Details>
+        <Footer>
+          <TableRows>
+            <TableRow>
+              <Height>0.25in</Height>
+              <TableCells>
+                <TableCell>
+                  <ColSpan>5</ColSpan>
+                  <ReportItems>
+                    <Textbox Name="Customer_SubtotalHeader">
+                      <CanGrow>true</CanGrow>
+                      <Style>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontWeight>Normal</FontWeight>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BackgroundColor>#d3dcfa</BackgroundColor>
+                        <PaddingTop>4pt</PaddingTop>
+                        <FontSize>8pt</FontSize>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                      <Value>Total</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="AvgUnitPrice_Total_2_2">
+                      <CanGrow>true</CanGrow>
+                      <Action>
+                        <Drillthrough>
+                          <Parameters>
+                            <Parameter Name="rs:EntityID">
+                              <Value>G4c235f0e-15f0-4ef6-a8c4-71536ba2204a</Value>
+                            </Parameter>
+                            <Parameter Name="rs:DrillType">
+                              <Value>List</Value>
+                            </Parameter>
+                            <Parameter Name="rs:Command">
+                              <Value>Drillthrough</Value>
+                            </Parameter>
+                            <Parameter Name="DrillthroughContext">
+                              <Value>=Code.DrillthroughContextBuilder.CreateAsString(DataSets!dataSet.RewrittenCommandText, new String() { "AvgUnitPrice_Sum", "AvgUnitPrice_Count" }, "&lt;SelectedPath xmlns=""http" &amp; Chr(58) &amp; "//schemas.microsoft.com/sqlserver/2004/10/semanticmodeling""&gt;&lt;RolePathItem&gt;&lt;RoleID&gt;G530fd4df-6fda-461a-b4fa-c8b842421e06&lt;/RoleID&gt;&lt;/RolePathItem&gt;&lt;/SelectedPath&gt;", new String() { "Customer", "Order" }, new Object() { Fields!Customer.Value, Fields!Order.Value }, new Boolean() { InScope("table_Customer"), InScope("table_Order") })</Value>
+                            </Parameter>
+                          </Parameters>
+                          <ReportName>/Models/Northwind</ReportName>
+                        </Drillthrough>
+                      </Action>
+                      <Style>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontWeight>Normal</FontWeight>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BackgroundColor>#d3dcfa</BackgroundColor>
+                        <PaddingTop>4pt</PaddingTop>
+                        <FontSize>8pt</FontSize>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                      <Value>=IIF(SUM(Fields!AvgUnitPrice_Count.Value)=0,Nothing,SUM(Fields!AvgUnitPrice_Sum.Value)/SUM(Fields!AvgUnitPrice_Count.Value))</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+            </TableRow>
+          </TableRows>
+        </Footer>
+        <Style />
+        <DataSetName>dataSet</DataSetName>
+        <Header>
+          <TableRows>
+            <TableRow>
+              <Height>0.25in</Height>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="CompanyName_Header">
+                      <CanGrow>true</CanGrow>
+                      <UserSort>
+                        <SortExpressionScope>table_Customer</SortExpressionScope>
+                        <SortExpression>=Fields!CompanyName.Value</SortExpression>
+                      </UserSort>
+                      <Style>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontWeight>Bold</FontWeight>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BackgroundColor>#518ae5</BackgroundColor>
+                        <PaddingTop>4pt</PaddingTop>
+                        <FontSize>8pt</FontSize>
+                        <TextAlign>Left</TextAlign>
+                        <Color>White</Color>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                      <Value>Company Name</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="ContactName_Header">
+                      <CanGrow>true</CanGrow>
+                      <UserSort>
+                        <SortExpressionScope>table_Customer</SortExpressionScope>
+                        <SortExpression>=Fields!ContactName.Value</SortExpression>
+                      </UserSort>
+                      <Style>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontWeight>Bold</FontWeight>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BackgroundColor>#518ae5</BackgroundColor>
+                        <PaddingTop>4pt</PaddingTop>
+                        <FontSize>8pt</FontSize>
+                        <TextAlign>Left</TextAlign>
+                        <Color>White</Color>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                      <Value>Contact Name</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="City_Header">
+                      <CanGrow>true</CanGrow>
+                      <UserSort>
+                        <SortExpressionScope>table_Customer</SortExpressionScope>
+                        <SortExpression>=Fields!City.Value</SortExpression>
+                      </UserSort>
+                      <Style>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontWeight>Bold</FontWeight>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BackgroundColor>#518ae5</BackgroundColor>
+                        <PaddingTop>4pt</PaddingTop>
+                        <FontSize>8pt</FontSize>
+                        <TextAlign>Left</TextAlign>
+                        <Color>White</Color>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                      <Value>City</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="OrderDate_Header">
+                      <CanGrow>true</CanGrow>
+                      <UserSort>
+                        <SortExpressionScope>table_Order</SortExpressionScope>
+                        <SortExpression>=Fields!OrderDate.Value</SortExpression>
+                      </UserSort>
+                      <Style>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontWeight>Bold</FontWeight>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BackgroundColor>#518ae5</BackgroundColor>
+                        <PaddingTop>4pt</PaddingTop>
+                        <FontSize>8pt</FontSize>
+                        <TextAlign>Left</TextAlign>
+                        <Color>White</Color>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                      <Value>Order Date</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="ShippedDate_Header">
+                      <CanGrow>true</CanGrow>
+                      <UserSort>
+                        <SortExpressionScope>table_Order</SortExpressionScope>
+                        <SortExpression>=Fields!ShippedDate.Value</SortExpression>
+                      </UserSort>
+                      <Style>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontWeight>Bold</FontWeight>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BackgroundColor>#518ae5</BackgroundColor>
+                        <PaddingTop>4pt</PaddingTop>
+                        <FontSize>8pt</FontSize>
+                        <TextAlign>Left</TextAlign>
+                        <Color>White</Color>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                      <Value>Shipped Date</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="AvgUnitPrice_Header">
+                      <CanGrow>true</CanGrow>
+                      <UserSort>
+                        <SortExpressionScope>table_Order</SortExpressionScope>
+                        <SortExpression>=IIF(Fields!AvgUnitPrice_Count.Value=0,Nothing,Fields!AvgUnitPrice_Sum.Value/Fields!AvgUnitPrice_Count.Value)</SortExpression>
+                      </UserSort>
+                      <Style>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontWeight>Bold</FontWeight>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BackgroundColor>#518ae5</BackgroundColor>
+                        <PaddingTop>4pt</PaddingTop>
+                        <FontSize>8pt</FontSize>
+                        <TextAlign>Left</TextAlign>
+                        <Color>White</Color>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                      <Value>Avg Unit Price</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+            </TableRow>
+          </TableRows>
+          <RepeatOnNewPage>true</RepeatOnNewPage>
+          <FixedHeader>true</FixedHeader>
+        </Header>
+        <TableGroups>
+          <TableGroup>
+            <Grouping Name="table_Customer">
+              <GroupExpressions>
+                <GroupExpression>=Fields!Customer.Value</GroupExpression>
+              </GroupExpressions>
+            </Grouping>
+            <Footer>
+              <TableRows>
+                <TableRow>
+                  <Height>0.25in</Height>
+                  <TableCells>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="blank">
+                          <CanGrow>true</CanGrow>
+                          <Style>
+                            <FontFamily>Tahoma</FontFamily>
+                            <FontWeight>Normal</FontWeight>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingTop>4pt</PaddingTop>
+                            <FontSize>8pt</FontSize>
+                            <TextAlign>Left</TextAlign>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <PaddingRight>2pt</PaddingRight>
+                          </Style>
+                          <Value />
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="blank2">
+                          <CanGrow>true</CanGrow>
+                          <Style>
+                            <FontFamily>Tahoma</FontFamily>
+                            <FontWeight>Normal</FontWeight>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingTop>4pt</PaddingTop>
+                            <FontSize>8pt</FontSize>
+                            <TextAlign>Left</TextAlign>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <PaddingRight>2pt</PaddingRight>
+                          </Style>
+                          <Value />
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="blank3">
+                          <CanGrow>true</CanGrow>
+                          <Style>
+                            <FontFamily>Tahoma</FontFamily>
+                            <FontWeight>Normal</FontWeight>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingTop>4pt</PaddingTop>
+                            <FontSize>8pt</FontSize>
+                            <TextAlign>Left</TextAlign>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <PaddingRight>2pt</PaddingRight>
+                          </Style>
+                          <Value />
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ColSpan>2</ColSpan>
+                      <ReportItems>
+                        <Textbox Name="Order_SubtotalHeader">
+                          <CanGrow>true</CanGrow>
+                          <Style>
+                            <FontFamily>Tahoma</FontFamily>
+                            <FontWeight>Normal</FontWeight>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <BackgroundColor>#d3dcfa</BackgroundColor>
+                            <PaddingTop>4pt</PaddingTop>
+                            <FontSize>8pt</FontSize>
+                            <TextAlign>Left</TextAlign>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <PaddingRight>2pt</PaddingRight>
+                          </Style>
+                          <Value>Total</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="AvgUnitPrice_Total_2_1">
+                          <CanGrow>true</CanGrow>
+                          <Action>
+                            <Drillthrough>
+                              <Parameters>
+                                <Parameter Name="rs:EntityID">
+                                  <Value>G4c235f0e-15f0-4ef6-a8c4-71536ba2204a</Value>
+                                </Parameter>
+                                <Parameter Name="rs:DrillType">
+                                  <Value>List</Value>
+                                </Parameter>
+                                <Parameter Name="rs:Command">
+                                  <Value>Drillthrough</Value>
+                                </Parameter>
+                                <Parameter Name="DrillthroughContext">
+                                  <Value>=Code.DrillthroughContextBuilder.CreateAsString(DataSets!dataSet.RewrittenCommandText, new String() { "AvgUnitPrice_Sum", "AvgUnitPrice_Count" }, "&lt;SelectedPath xmlns=""http" &amp; Chr(58) &amp; "//schemas.microsoft.com/sqlserver/2004/10/semanticmodeling""&gt;&lt;RolePathItem&gt;&lt;RoleID&gt;G530fd4df-6fda-461a-b4fa-c8b842421e06&lt;/RoleID&gt;&lt;/RolePathItem&gt;&lt;/SelectedPath&gt;", new String() { "Customer", "Order" }, new Object() { Fields!Customer.Value, Fields!Order.Value }, new Boolean() { InScope("table_Customer"), InScope("table_Order") })</Value>
+                                </Parameter>
+                              </Parameters>
+                              <ReportName>/Models/Northwind</ReportName>
+                            </Drillthrough>
+                          </Action>
+                          <Style>
+                            <FontFamily>Tahoma</FontFamily>
+                            <FontWeight>Normal</FontWeight>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <BackgroundColor>#d3dcfa</BackgroundColor>
+                            <PaddingTop>4pt</PaddingTop>
+                            <FontSize>8pt</FontSize>
+                            <TextAlign>Left</TextAlign>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <PaddingRight>2pt</PaddingRight>
+                          </Style>
+                          <Value>=IIF(SUM(Fields!AvgUnitPrice_Count.Value)=0,Nothing,SUM(Fields!AvgUnitPrice_Sum.Value)/SUM(Fields!AvgUnitPrice_Count.Value))</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                  </TableCells>
+                </TableRow>
+              </TableRows>
+            </Footer>
+            <Sorting>
+              <SortBy>
+                <SortExpression>=IIf(True, Fields!CompanyName.Value, Nothing)</SortExpression>
+              </SortBy>
+            </Sorting>
+          </TableGroup>
+        </TableGroups>
+        <Height>0in</Height>
+        <Left>0.5in</Left>
+        <Top>1.25in</Top>
+      </Table>
+      <Textbox Name="TotalRows">
+        <Left>0.5in</Left>
+        <Top>5.25in</Top>
+        <CanGrow>true</CanGrow>
+        <Width>7.5in</Width>
+        <Height>0.25in</Height>
+        <Style>
+          <FontWeight>Normal</FontWeight>
+          <PaddingLeft>3pt</PaddingLeft>
+          <PaddingTop>3pt</PaddingTop>
+          <FontSize>8pt</FontSize>
+          <TextAlign>Left</TextAlign>
+          <PaddingBottom>3pt</PaddingBottom>
+          <PaddingRight>3pt</PaddingRight>
+        </Style>
+        <CustomProperties>
+          <CustomProperty>
+            <Name>rb:SpecialContent</Name>
+            <Value>TotalRows</Value>
+          </CustomProperty>
+        </CustomProperties>
+        <Value>=String.Format("Total Orders" &amp; Chr(58) &amp; " {0}", COUNTROWS("dataSet"))</Value>
+      </Textbox>
+      <Textbox Name="FilterDescription">
+        <Left>0.5in</Left>
+        <Top>5.75in</Top>
+        <CanGrow>true</CanGrow>
+        <Width>7.5in</Width>
+        <Height>0.25in</Height>
+        <Style>
+          <FontWeight>Normal</FontWeight>
+          <PaddingLeft>3pt</PaddingLeft>
+          <PaddingTop>3pt</PaddingTop>
+          <FontSize>8pt</FontSize>
+          <TextAlign>Left</TextAlign>
+          <PaddingBottom>3pt</PaddingBottom>
+          <PaddingRight>3pt</PaddingRight>
+        </Style>
+        <CustomProperties>
+          <CustomProperty>
+            <Name>rb:SpecialContent</Name>
+            <Value>FilterDescription</Value>
+          </CustomProperty>
+        </CustomProperties>
+        <Value>All Orders</Value>
+      </Textbox>
+    </ReportItems>
+  </Body>
+  <Classes>
+    <Class>
+      <ClassName>Microsoft.ReportingServices.SemanticQueryReportLibrary.DrillthroughContextBuilder</ClassName>
+      <InstanceName>DrillthroughContextBuilder</InstanceName>
+    </Class>
+  </Classes>
+  <Width>8.5in</Width>
+  <DataSources>
+    <DataSource Name="dataSource">
+      <rd:DataSourceID>232cbc60-ed7b-4d00-9a25-72aabaf97512</rd:DataSourceID>
+      <DataSourceReference>/Models/Northwind</DataSourceReference>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="dataSet">
+      <Query>
+        <DataSourceName>dataSource</DataSourceName>
+        <CommandText>&lt;SemanticQuery xmlns="http://schemas.microsoft.com/sqlserver/2004/10/semanticmodeling" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rb="http://schemas.microsoft.com/sqlserver/2004/11/reportbuilder" xmlns:qd="http://schemas.microsoft.com/sqlserver/2004/11/semanticquerydesign"&gt;
+  &lt;Hierarchies&gt;
+    &lt;Hierarchy&gt;
+      &lt;BaseEntity&gt;
+        &lt;!--Order--&gt;
+        &lt;EntityID&gt;Ga240dd4b-a0b3-4e8a-8b42-eb4ab8d7a328&lt;/EntityID&gt;
+      &lt;/BaseEntity&gt;
+      &lt;Groupings&gt;
+        &lt;Grouping Name="Customer"&gt;
+          &lt;Expression Name="Customer"&gt;
+            &lt;Path&gt;
+              &lt;RolePathItem&gt;
+                &lt;!--Customer--&gt;
+                &lt;RoleID&gt;Gf661a2b1-0aeb-4c78-9d51-5c2ad7ce4f44&lt;/RoleID&gt;
+              &lt;/RolePathItem&gt;
+            &lt;/Path&gt;
+            &lt;EntityRef&gt;
+              &lt;!--Customer--&gt;
+              &lt;EntityID&gt;Geb928a56-9997-4925-af1b-4b177cdd3170&lt;/EntityID&gt;
+            &lt;/EntityRef&gt;
+          &lt;/Expression&gt;
+          &lt;Details&gt;
+            &lt;Expression Name="CompanyName"&gt;
+              &lt;AttributeRef&gt;
+                &lt;!--Company Name--&gt;
+                &lt;AttributeID&gt;Gad047f3d-2f5a-49f5-9e6a-ac135307f5f3&lt;/AttributeID&gt;
+              &lt;/AttributeRef&gt;
+            &lt;/Expression&gt;
+            &lt;Expression Name="ContactName"&gt;
+              &lt;AttributeRef&gt;
+                &lt;!--Contact Name--&gt;
+                &lt;AttributeID&gt;G5a940077-dd6b-4c8f-8a63-245283800c39&lt;/AttributeID&gt;
+              &lt;/AttributeRef&gt;
+            &lt;/Expression&gt;
+            &lt;Expression Name="City"&gt;
+              &lt;AttributeRef&gt;
+                &lt;!--City--&gt;
+                &lt;AttributeID&gt;G515e4a41-3290-4a11-8cb0-0ab218f671bd&lt;/AttributeID&gt;
+              &lt;/AttributeRef&gt;
+            &lt;/Expression&gt;
+          &lt;/Details&gt;
+        &lt;/Grouping&gt;
+        &lt;Grouping Name="Order"&gt;
+          &lt;Expression Name="Order"&gt;
+            &lt;EntityRef&gt;
+              &lt;!--Order--&gt;
+              &lt;EntityID&gt;Ga240dd4b-a0b3-4e8a-8b42-eb4ab8d7a328&lt;/EntityID&gt;
+            &lt;/EntityRef&gt;
+          &lt;/Expression&gt;
+          &lt;Details&gt;
+            &lt;Expression Name="OrderDate"&gt;
+              &lt;AttributeRef&gt;
+                &lt;!--Order Date--&gt;
+                &lt;AttributeID&gt;G2cf20212-6e20-4819-9643-f4592b136f87&lt;/AttributeID&gt;
+              &lt;/AttributeRef&gt;
+            &lt;/Expression&gt;
+            &lt;Expression Name="ShippedDate"&gt;
+              &lt;AttributeRef&gt;
+                &lt;!--Shipped Date--&gt;
+                &lt;AttributeID&gt;G6ac74e13-07bf-4555-ac91-86f985289d91&lt;/AttributeID&gt;
+              &lt;/AttributeRef&gt;
+            &lt;/Expression&gt;
+            &lt;Expression Name="expr1"&gt;
+              &lt;AttributeRef&gt;
+                &lt;!--Required Date--&gt;
+                &lt;AttributeID&gt;Gfca0e2f7-ed37-4ff9-9d29-e6306c7a207a&lt;/AttributeID&gt;
+              &lt;/AttributeRef&gt;
+            &lt;/Expression&gt;
+            &lt;Expression Name="expr2"&gt;
+              &lt;AttributeRef&gt;
+                &lt;!--Ship Name--&gt;
+                &lt;AttributeID&gt;Gc7a83797-6be0-4cff-96b4-ba2faae7afb9&lt;/AttributeID&gt;
+              &lt;/AttributeRef&gt;
+            &lt;/Expression&gt;
+            &lt;Expression Name="expr3"&gt;
+              &lt;AttributeRef&gt;
+                &lt;!--Freight--&gt;
+                &lt;AttributeID&gt;G90c903e1-d921-4039-9deb-809278b1ef46&lt;/AttributeID&gt;
+              &lt;/AttributeRef&gt;
+            &lt;/Expression&gt;
+          &lt;/Details&gt;
+        &lt;/Grouping&gt;
+      &lt;/Groupings&gt;
+    &lt;/Hierarchy&gt;
+  &lt;/Hierarchies&gt;
+  &lt;MeasureGroups&gt;
+    &lt;MeasureGroup&gt;
+      &lt;BaseEntity&gt;
+        &lt;!--Order--&gt;
+        &lt;EntityID&gt;Ga240dd4b-a0b3-4e8a-8b42-eb4ab8d7a328&lt;/EntityID&gt;
+      &lt;/BaseEntity&gt;
+      &lt;Measures&gt;
+        &lt;Expression Name="AvgUnitPrice_Sum"&gt;
+          &lt;Function&gt;
+            &lt;FunctionName&gt;Sum&lt;/FunctionName&gt;
+            &lt;Arguments&gt;
+              &lt;Expression&gt;
+                &lt;Path&gt;
+                  &lt;RolePathItem&gt;
+                    &lt;!--Order Details--&gt;
+                    &lt;RoleID&gt;G530fd4df-6fda-461a-b4fa-c8b842421e06&lt;/RoleID&gt;
+                  &lt;/RolePathItem&gt;
+                &lt;/Path&gt;
+                &lt;AttributeRef&gt;
+                  &lt;!--Unit Price--&gt;
+                  &lt;AttributeID&gt;G4254a5f1-c2d3-4092-8fb6-fe9562822080&lt;/AttributeID&gt;
+                &lt;/AttributeRef&gt;
+              &lt;/Expression&gt;
+            &lt;/Arguments&gt;
+          &lt;/Function&gt;
+          &lt;CustomProperties&gt;
+            &lt;CustomProperty Name="qd:Design"&gt;
+              &lt;Value xsi:type="xsd:string"&gt;AvgUnitPrice&lt;/Value&gt;
+            &lt;/CustomProperty&gt;
+          &lt;/CustomProperties&gt;
+        &lt;/Expression&gt;
+        &lt;Expression Name="AvgUnitPrice_Count"&gt;
+          &lt;Function&gt;
+            &lt;FunctionName&gt;Count&lt;/FunctionName&gt;
+            &lt;Arguments&gt;
+              &lt;Expression&gt;
+                &lt;Path&gt;
+                  &lt;RolePathItem&gt;
+                    &lt;!--Order Details--&gt;
+                    &lt;RoleID&gt;G530fd4df-6fda-461a-b4fa-c8b842421e06&lt;/RoleID&gt;
+                  &lt;/RolePathItem&gt;
+                &lt;/Path&gt;
+                &lt;AttributeRef&gt;
+                  &lt;!--Unit Price--&gt;
+                  &lt;AttributeID&gt;G4254a5f1-c2d3-4092-8fb6-fe9562822080&lt;/AttributeID&gt;
+                &lt;/AttributeRef&gt;
+              &lt;/Expression&gt;
+            &lt;/Arguments&gt;
+          &lt;/Function&gt;
+          &lt;CustomProperties&gt;
+            &lt;CustomProperty Name="qd:Design"&gt;
+              &lt;Value xsi:type="xsd:string"&gt;AvgUnitPrice&lt;/Value&gt;
+            &lt;/CustomProperty&gt;
+          &lt;/CustomProperties&gt;
+        &lt;/Expression&gt;
+      &lt;/Measures&gt;
+    &lt;/MeasureGroup&gt;
+  &lt;/MeasureGroups&gt;
+  &lt;CalculatedAttributes&gt;
+    &lt;Expression Name="AvgUnitPrice"&gt;
+      &lt;Function&gt;
+        &lt;FunctionName&gt;Aggregate&lt;/FunctionName&gt;
+        &lt;Arguments&gt;
+          &lt;Expression&gt;
+            &lt;Path&gt;
+              &lt;RolePathItem&gt;
+                &lt;!--Order Details--&gt;
+                &lt;RoleID&gt;G530fd4df-6fda-461a-b4fa-c8b842421e06&lt;/RoleID&gt;
+              &lt;/RolePathItem&gt;
+            &lt;/Path&gt;
+            &lt;AttributeRef&gt;
+              &lt;!--Avg Unit Price--&gt;
+              &lt;AttributeID&gt;Gd12c438c-71a8-4283-b554-b3e283e2a970&lt;/AttributeID&gt;
+            &lt;/AttributeRef&gt;
+          &lt;/Expression&gt;
+        &lt;/Arguments&gt;
+      &lt;/Function&gt;
+      &lt;CustomProperties&gt;
+        &lt;CustomProperty Name="qd:Design"&gt;
+          &lt;Value xsi:type="xsd:string"&gt;&lt;/Value&gt;
+        &lt;/CustomProperty&gt;
+      &lt;/CustomProperties&gt;
+    &lt;/Expression&gt;
+  &lt;/CalculatedAttributes&gt;
+&lt;/SemanticQuery&gt;</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Customer">
+          <DataField>Customer</DataField>
+        </Field>
+        <Field Name="CompanyName">
+          <DataField>CompanyName</DataField>
+        </Field>
+        <Field Name="ContactName">
+          <DataField>ContactName</DataField>
+        </Field>
+        <Field Name="City">
+          <DataField>City</DataField>
+        </Field>
+        <Field Name="Order">
+          <DataField>Order</DataField>
+        </Field>
+        <Field Name="OrderDate">
+          <DataField>OrderDate</DataField>
+        </Field>
+        <Field Name="ShippedDate">
+          <DataField>ShippedDate</DataField>
+        </Field>
+        <Field Name="expr1">
+          <DataField>expr1</DataField>
+        </Field>
+        <Field Name="expr2">
+          <DataField>expr2</DataField>
+        </Field>
+        <Field Name="expr3">
+          <DataField>expr3</DataField>
+        </Field>
+        <Field Name="AvgUnitPrice_Sum">
+          <DataField>AvgUnitPrice_Sum</DataField>
+        </Field>
+        <Field Name="AvgUnitPrice_Count">
+          <DataField>AvgUnitPrice_Count</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <PageWidth>8.5in</PageWidth>
+</Report>

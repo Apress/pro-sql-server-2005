@@ -1,0 +1,10 @@
+bin\Debug\SSRS 2005 WMI.exe
+bin\Debug\SSRS 2005 WMI.pdb
+bin\Debug\SSRS 2005 WMI.xml
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\SSRS_2005_WMI.frmMain.resources
+obj\Debug\SSRS_2005_WMI.Resources.resources
+obj\Debug\SSRS 2005 WMI.vbproj.GenerateResource.Cache
+obj\Debug\SSRS 2005 WMI.exe
+obj\Debug\SSRS 2005 WMI.xml
+obj\Debug\SSRS 2005 WMI.pdb

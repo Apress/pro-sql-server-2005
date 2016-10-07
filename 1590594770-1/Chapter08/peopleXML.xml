@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<people>
+  <person>
+    <name>
+      <givenName>Martin</givenName>
+      <familyName>Smith</familyName>
+    </name>
+    <age>33</age>
+    <height>short</height>
+  </person>
+  <person>
+    <name>
+      <givenName>Stacy</givenName>
+      <familyName>Eckstein</familyName>
+    </name>
+    <age>40</age>
+    <height>short</height>
+  </person>
+  <person>
+    <name>
+      <givenName>Tom</givenName>
+      <familyName>Rizzo</familyName>
+    </name>
+    <age>30</age>
+    <height>medium</height>
+  </person>
+</people>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<doc id="d6" xmlns="urn:example/customer"><customer id="c6"><name>Gabrielle</name><order id="1" year="2004"></order><order id="2" year="2002"></order><notes><buys>widgets</buys><saleslead>Bob</saleslead> <competitor>Acme</competitor></notes></customer></doc>

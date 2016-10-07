@@ -1,0 +1,14 @@
+bin\Debug\Report Control Sample.exe
+bin\Debug\Report Control Sample.pdb
+bin\Debug\Report Control Sample.xml
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Report_Control_Sample.frmMain.resources
+obj\Debug\Report_Control_Sample.Resources.resources
+obj\Debug\Report Control Sample.vbproj.GenerateResource.Cache
+obj\Debug\Report Control Sample.exe
+obj\Debug\Report Control Sample.xml
+obj\Debug\Report Control Sample.pdb
+bin\Debug\Report Control Sample.exe.config
+obj\Debug\Report_Control_Sample.Report1.rdlc
+obj\Debug\RdlCompile.cache
+obj\Debug\RdlCompile.compiled

@@ -1,0 +1,8 @@
+.\bin\Debug\SQLWS_App.exe.config
+obj\Debug\SQLWS_App.exe
+obj\Debug\SQLWS_App.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\SQLWS_App.Properties.Resources.resources
+obj\Debug\SQLWS_App.csproj.GenerateResource.Cache
+.\bin\Debug\SQLWS_App.exe
+.\bin\Debug\SQLWS_App.pdb

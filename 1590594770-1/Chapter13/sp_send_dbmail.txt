@@ -1,0 +1,5 @@
+Sp_send_dbmail      @profile_name='MyProfile',
+@recipients='testuser@apress.com',
+@subject='Test Message',
+@body='This is the body of the message.',
+@importance='HIGH'

@@ -1,0 +1,6 @@
+Use msdb
+GO
+EXEC sp_send_dbmail  @profile_name='myDatabaseMailProfile',
+@recipients='username"foo.bar',
+@subject='Test message',
+@body='This is the body of the test message.'

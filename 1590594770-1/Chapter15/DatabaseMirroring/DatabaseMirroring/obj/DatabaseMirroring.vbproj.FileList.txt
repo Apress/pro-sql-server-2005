@@ -1,0 +1,11 @@
+bin\DatabaseMirroring.exe.config
+obj\Debug\DatabaseMirroring.exe
+obj\Debug\DatabaseMirroring.xml
+obj\Debug\DatabaseMirroring.pdb
+bin\DatabaseMirroring.exe
+bin\DatabaseMirroring.pdb
+bin\DatabaseMirroring.xml
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\DatabaseMirroring.frmMain.resources
+obj\Debug\DatabaseMirroring.MyResources.resources
+obj\Debug\DatabaseMirroring.vbproj.GenerateResource.Cache

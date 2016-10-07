@@ -1,0 +1,6 @@
+CALCULATE;
+CREATE MEMBER CURRENTCUBE.[MEASURES].[Averge Product Cost Per-Order] AS
+[Measures].[Total Product Cost]/[Measures].[Order Quantity], 
+FORMAT_STRING = "Currency", VISIBLE = 1  ;
+
+

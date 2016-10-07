@@ -1,0 +1,20 @@
+CREATE CREDENTIAL [DevCredential]
+  WITH IDENTITY='<<Domain\Username>>',
+  SECRET='<<password>>'
+
+USE MSDB
+GO
+sp_add_proxy @proxy_name = 'SSISDevProxy',
+@enabled = 1,
+@description = 'Proxy account used by developers to test their SSIS packages',
+@credential_name = 'DevCredential'
+
+sp_grant_proxy_to_subsystem
+    @proxy_name = N'SSISDevProxy',
+    @subsystem_name = N'SSIS'
+
+
+sp_grant_login_to_proxy
+  @login_name = N'Tammie',
+@proxy_name = N'SSISDevProxy'
+
